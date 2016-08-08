@@ -6,7 +6,7 @@ Shell interfaces have changed in purpose over the years. Changing technologies a
 
 In this mode, CLI authors have written scripts to allow installation of applications on headless servers. The intention is usually to support "unattended" installation of software.
 
-```
+```bash
 $~ sudo apt-get install curl
 ```
 
@@ -17,7 +17,7 @@ Here, a CLI is deployed to a server and it interacts with local filesystems and 
 * Generate a report from the application or operating system.
 * Modify the operating system. IE: manage user accounts, alter local security settings
 
-```
+```bash
 $~ awk -F: '($1 > 1000) { print $3 }' /etc/passwd
 ```
 
@@ -25,7 +25,7 @@ $~ awk -F: '($1 > 1000) { print $3 }' /etc/passwd
 
 A remote OS CLI uses the Secure SHell \(SSH\) to interact with remote software and operating systems.
 
-```
+```bash
 $~ ssh davidl@192.168.0.10 "df -h"
 ```
 
@@ -33,7 +33,7 @@ $~ ssh davidl@192.168.0.10 "df -h"
 
 Most recently, CLI Tools are used to interact with APIs exposed by SaaS and PaaS providers to execute any number of functions on remote systems. For example, the AWS \(Amazon Web Services\) exposes a rich API for managing all the available cloud resources they offer.
 
-```
+```bash
 $~ curl -XGET \
     -H 'Content-Type: application/json' \
     -H 'Authorization: basic ZGF2aWRsOnBhc3N3b3JkCg==' \
