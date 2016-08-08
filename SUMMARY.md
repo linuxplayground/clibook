@@ -2,5 +2,5 @@
 
 * [Readme](README.md)
 * [Introduction](introduction.md)
-* [Types Of CLI](types-of-cli.md)
+* [Types Of CLI](TYPES-OF-CLI.md)
 
