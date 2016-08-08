@@ -7,7 +7,7 @@ Shell interfaces have changed in purpose over the years. Changing technologies a
 In this mode, CLI authors have written scripts to allow installation of applications on headless servers. The intention is usually to support "unattended" installation of software.
 
 ```
-$~ sudo apt get install curl
+$~ sudo apt-get install curl
 ```
 
 ### Local Automation Tools
@@ -25,7 +25,6 @@ $~ awk -F: '($1 > 1000) { print $3 }' /etc/passwd
 
 A remote OS CLI uses the Secure SHell \(SSH\) to interact with remote software and operating systems.
 
-
 ```
 $~ ssh davidl@192.168.0.10 "df -h"
 ```
@@ -40,6 +39,4 @@ $~ curl -XGET \
     -H 'Authorization: basic ZGF2aWRsOnBhc3N3b3JkCg==' \
     https://api.example.com/v1/resource
 ```
-
-
 
