@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-* [Types of CLI](types-of-cli.md)
+* [Readme](README.md)
 * [Introduction](introduction.md)
+* [Types Of CLI](types-of-cli.md)
 
