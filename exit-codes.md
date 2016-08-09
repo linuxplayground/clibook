@@ -67,7 +67,7 @@ Save this file as `exit1.sh`, set it's executable permission and run it.
 ```
 Having useful exit codes that can be tested for in your scripts allows your script to be included in other scripts in creative ways.  To demonstrate this concept, lets write a script that serves beer in a bar.  The script will accept two arguments:
 ```
-./servebeer.sh <name of beer> <your age>
+./servebeer.sh <your age>
 ```
 The script will check your age using the `exit1.sh` script and then if all is OK, it will serve the beer.
 
