@@ -1,4 +1,4 @@
-## Exit Codes
+# Exit Codes
 
 Exit codes are used in CLI scripts to know the execution result.  All the standard GNU tools available emit exit codes on completion of failure that provide a hint as to the execution result.
 
@@ -10,7 +10,7 @@ EXIT STATUS
   (Note: POSIX error handling code should check for '2' or greater.)
 ```
 
-### Testing for Exit Codes in Bash
+## Testing for Exit Codes in Bash
 
 Bash records the exit code of the last command ran in the variable: `?`
 
@@ -30,7 +30,7 @@ In the above example, grep exited with a status code of 1 indicating that \(acco
 
 In the second attempt, a result was found and grep exited with exit code = 0.
 
-### Declaring Your Own Exit Codes
+# Declaring Your Own Exit Codes
 
 As CLI scripts become more complex and other developers use them in their own scripts, it becomes good practice to emit exit codes depending on the success or failure of a command to execute.  Every bash script will exit with exit code = 0 by default.
 
@@ -49,7 +49,9 @@ Here is an example of a simple bash script that exits with exit code = 1 on fail
 [[ $1 != *[[:digit:]]* ]] && exit 3
 [ $1 -lt 18 ] && exit 1 || exit 0
 ```
+
 Save this file as `exit1.sh`, set it's executable permission and run it.
+
 ```
 ~$ chmod +x exit1.sh
 ~$ ./exit1.sh
@@ -65,10 +67,13 @@ Save this file as `exit1.sh`, set it's executable permission and run it.
 ~$ echo $?
 0
 ```
+
 Having useful exit codes that can be tested for in your scripts allows your script to be included in other scripts in creative ways.  To demonstrate this concept, lets write a script that serves beer in a bar.  The script will accept two arguments:
+
 ```
 ./servebeer.sh <your age>
 ```
+
 The script will check your age using the `exit1.sh` script and then if all is OK, it will serve the beer.
 
 ```bash

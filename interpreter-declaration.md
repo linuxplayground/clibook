@@ -1,4 +1,4 @@
-## The Interpreter Declaration
+# The Interpreter Declaration
 
 The shell environment will read the very first line of the script to determin which interpreter it should invoke your script with. This line is optional because it is possible to execute scripts by passing them as an argument to the interpreter you need. For example:
 
@@ -47,12 +47,10 @@ Now try to execute it directly. The execute permission is not set so we get the 
 
 Now try to set the execute bit and run the test again.
 
-```
-~$ chmod +x hello3.py
-~$ ./hello3.py
- ./hello3.py: line 1: syntax error near unexpected token `'Hello, World!''
- ./hello3.py: line 1: `print('Hello, World!')'
-```
+    ~$ chmod +x hello3.py
+    ~$ ./hello3.py
+     ./hello3.py: line 1: syntax error near unexpected token `'Hello, World!''
+     ./hello3.py: line 1: `print('Hello, World!')'
 
 The error is a BASH error. Bash doesn't know how to interpret this python code.
 
@@ -77,3 +75,4 @@ Save as hello4.py, set the execute permission and execute it directly to see why
 ~$ ./hello4.py
 Hello, World!
 ```
+

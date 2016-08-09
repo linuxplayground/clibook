@@ -6,4 +6,5 @@
 * [Part 1: Bash Basics](structure-of-a-cli.md)
 * [Interpreter Declaration](interpreter-declaration.md)
 * [Exit Codes](exit-codes.md)
+* [Comments](comments.md)
 
