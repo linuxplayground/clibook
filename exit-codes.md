@@ -71,3 +71,14 @@ Having useful exit codes that can be tested for in your scripts allows your scri
 ```
 The script will check your age using the `exit1.sh` script and then if all is OK, it will serve the beer.
 
+```bash
+#!/usr/bin/env bash
+# Serve beer only if person is 18 or over.
+echo "Hi, I am your barman."
+./exit1.sh $1
+ALLOWED=$?
+[ $ALLOWED -eq 0 ] && echo "Your beer is served"
+[ $ALLOWED -eq 1 ] && echo "Sorry 'Sir' you are too young to drink here."
+[ $ALLOWED -gt 1 ] && echo "I can not tell how old you are."
+```
+
