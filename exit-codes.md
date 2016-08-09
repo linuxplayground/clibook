@@ -36,7 +36,7 @@ As CLI scripts become more complex and other developers use them in their own sc
 
 Here is an example of a simple bash script that exits with exit code = 1 on failure and exit code = 0 on success.
 
-```
+```bash
 #!\/usr\/bin\/env bash
 
 # Example of script showing exit codes
