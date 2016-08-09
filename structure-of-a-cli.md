@@ -14,8 +14,8 @@ echo 'Hello, World!'
 Save this script as, `hello1.sh`, set the execute bit on the file permissions and execute it.
 
 ```bash
-$~ chmod +x hello.sh
-$~ ./hello.sh
+~$ chmod +x hello.sh
+~$ ./hello.sh
 Hello, World!
 ```
 
@@ -28,7 +28,7 @@ echo 'Hello, World!'
 Save this script as hello2.sh and execute it by passing the file name as an argument to the bash interpreter.
 
 ```bash
-$~/ usr/bin/bash hello2.sh
+~$ /usr/bin/bash hello2.sh
 Hello, World!
 ```
 
