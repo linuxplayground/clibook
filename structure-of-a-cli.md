@@ -1,4 +1,4 @@
-# Structure Of A CLI
+# Part 1: Structure Of A CLI
 
 Every CLI has a similar structure.  They are as follows:
 
@@ -33,4 +33,52 @@ Hello, World!
 ```
 
 The path to Bash on your system \(if you are not using the Vagrant image\) might be different.  It is precicly because of this reason, that we use `#!/usr/bin/env bash` in the interpreter declaration.  It instructs the system to find the interpreter and use it.
+
+In this example, you can simply set the execute bit on the file and execute it from inside a bash shell and it will work.  The reason for this is because the shell assumes that the script is a bash script by default.  Next try an example Python CLI to see the difference.
+
+Create hello3.py as follows:
+
+```
+print('Hello, World!')
+```
+
+Now try to execute it directly.  The execute permission is not set so we get the expected `Permission denied` error.
+
+```
+~$ ./hello3.py
+-bash: ./hello3.py: Permission denied
+```
+
+Now try to set the execute bit and run the test again.
+
+    vagrant@vagrant-ubuntu-trusty-64:~$ chmod +x hello3.py
+    vagrant@vagrant-ubuntu-trusty-64:~$ ./hello3.py
+    ./hello3.py: line 1: syntax error near unexpected token `'Hello, World!''
+    ./hello3.py: line 1: `print('Hello, World!')'
+
+The error is a BASH error.  Bash doesn't know how to interpret this python code.
+
+Now execute it using Python
+
+```
+~$ /usr/bin/env python hello3.py
+Hello, World!
+```
+
+Finally, just for kicks alter the hello3.py script to include an interpreter declaration:
+
+```
+#!/usr/bin/env python
+print('Hello, World!')
+```
+
+Save as hello4.py, set the execute permission and execute it directly.
+
+```
+~$ chmod +x hello4.py
+~$ ./hello4.py
+Hello, World!
+```
+
+
 
