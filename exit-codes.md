@@ -40,14 +40,14 @@ Here is an example of a simple bash script that exits with exit code = 1 on fail
 #!/usr/bin/env bash
 
 # Example of script showing exit codes
-# Exit = 0 for numbers below 50
-# Exit = 1 for numbers above 50
+# Exit = 0 for numbers above 17
+# Exit = 1 for numbers below 18
 # exit = 2 for no input
 # exit = 3 for non integer input.
 
 [ -z $1 ] && exit 2
 [[ $1 != *[[:digit:]]* ]] && exit 3
-[ $1 -lt 50 ] && exit 0 || exit 1
+[ $1 -lt 18 ] && exit 1 || exit 0
 ```
 Save this file as `exit1.sh`, set it's executable permission and run it.
 ```
@@ -58,12 +58,16 @@ Save this file as `exit1.sh`, set it's executable permission and run it.
 ~$ ./exit1.sh foo
 ~$ echo $?
 3
-~$ ./exit1.sh 75
+~$ ./exit1.sh 21
 ~$ echo $?
 1
-~$ ./exit1.sh 25
+~$ ./exit1.sh 16
 ~$ echo $?
 0
 ```
-
+Having useful exit codes that can be tested for in your scripts allows your script to be included in other scripts in creative ways.  To demonstrate this concept, lets write a script that serves beer in a bar.  The script will accept two arguments:
+```
+./servebeer.sh <name of beer> <your age>
+```
+The script will check your age using the `exit1.sh` script and then if all is OK, it will serve the beer.
 
