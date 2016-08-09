@@ -2,7 +2,7 @@
 
 Exit codes are used in CLI scripts to know the execution result.  All the standard GNU tools available emit exit codes on completion of failure that provide a hint as to the execution result.
 
-To find the exit codes for a particular command you can start with the manual for that tool.  For example in the manual for `grep` \(` ~$ man grep` \)
+To find the exit codes for a particular command you can start with the manual for that tool.  For example in the manual for `grep` \(`~$ man grep` \)
 
 ```
 EXIT STATUS
@@ -32,9 +32,20 @@ In the second attempt, a result was found and grep exited with exit code = 0.
 
 ### Declaring Your Own Exit Codes
 
-As CLI scripts become more complex and other developers use them in their own scripts, it becomes good practice to emit exit codes depending on the success or failure of a command to execute.  Every bash script will exit with exit code = 0 by default. 
+As CLI scripts become more complex and other developers use them in their own scripts, it becomes good practice to emit exit codes depending on the success or failure of a command to execute.  Every bash script will exit with exit code = 0 by default.
 
 Here is an example of a simple bash script that exits with exit code = 1 on failure and exit code = 0 on success.
 
+```
+#!\/usr\/bin\/env bash
 
+# Example of script showing exit codes
+# Exit = 0 for numbers below 50
+# Exit = 1 for numbers above 50
+# exit = 2 for no input
+# exit = 3 for non integer input.
 
+[ -z $1 \] && exit 2
+[\[ $1 != \*\[\[:digit:\]\]\* \]\] && exit 3
+[ $1 -lt 50 \] && exit 0 \|\| exit 1
+```
