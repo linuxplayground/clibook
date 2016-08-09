@@ -1,5 +1,11 @@
 # Part 1: BASH Basics
 
+## Contents:
+
+* [Interpreter Declaration](/interpreter-declaration.md)
+* [Comments](/comments.md)
+* [Exit Codes](/exit-codes.md)
+
 
 
 This part is all about the various components of BASH and what they mean and why we use them.  If you are already familar with BASH, then feel free to skim read this whole section.
