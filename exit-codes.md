@@ -49,4 +49,21 @@ Here is an example of a simple bash script that exits with exit code = 1 on fail
 [[ $1 != *[[:digit:]]* ]] && exit 3
 [ $1 -lt 50 ] && exit 0 || exit 1
 ```
+Save this file as `exit1.sh`, set it's executable permission and run it.
+```
+~$ chmod +x exit1.sh
+~$ ./exit1.sh
+~$ echo $?
+2
+~$ ./exit1.sh foo
+~$ echo $?
+3
+~$ ./exit1.sh 75
+~$ echo $?
+1
+~$ ./exit1.sh 25
+~$ echo $?
+0
+```
+
 
