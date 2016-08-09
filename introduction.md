@@ -20,6 +20,8 @@ All code snippets have been tested on a simple vagrant virtual machine.  In some
 
 * Vagrant
 
+* Virtualbox \(For Vagrant\)
+
 * An internet connection so you can download the vagrant box.
 
 
@@ -36,6 +38,7 @@ Clone the book repository:
 ```bash
 $~ git clone git@github.com:linuxplayground/clibook-code.git
 $~ cd clibook.git
+$~ vagrant up clibook --provider virtualbox
 ```
 
 
