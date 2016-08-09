@@ -37,7 +37,7 @@ As CLI scripts become more complex and other developers use them in their own sc
 Here is an example of a simple bash script that exits with exit code = 1 on failure and exit code = 0 on success.
 
 ```bash
-#!\/usr\/bin\/env bash
+#!/usr/bin/env bash
 
 # Example of script showing exit codes
 # Exit = 0 for numbers below 50
@@ -45,7 +45,8 @@ Here is an example of a simple bash script that exits with exit code = 1 on fail
 # exit = 2 for no input
 # exit = 3 for non integer input.
 
-[ -z $1 \] && exit 2
-[\[ $1 != \*\[\[:digit:\]\]\* \]\] && exit 3
-[ $1 -lt 50 \] && exit 0 \|\| exit 1
+[ -z $1 ] && exit 2
+[[ $1 != *[[:digit:]]* ]] && exit 3
+[ $1 -lt 50 ] && exit 0 || exit 1
 ```
+
